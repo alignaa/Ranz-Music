@@ -23,8 +23,6 @@ from MusicIndo.utils.database import is_on_off
 from MusicIndo.utils.formatters import time_to_seconds
 
 
-kukis = "mycokis.txt"
-
 async def shell_cmd(cmd):
     proc = await asyncio.create_subprocess_shell(
         cmd,
@@ -259,7 +257,6 @@ class YouTubeAPI:
                 "format": "bestaudio/[ext=m4a]",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
-                "cookiefile": kukis,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
@@ -277,7 +274,6 @@ class YouTubeAPI:
                 "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio[ext=m4a])",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
-                "cookiefile": kukis,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
@@ -297,7 +293,6 @@ class YouTubeAPI:
                 "format": formats,
                 "outtmpl": fpath,
                 "geo_bypass": True,
-                "cookiefile": kukis,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
@@ -315,7 +310,6 @@ class YouTubeAPI:
                 "geo_bypass": True,
                 "nocheckcertificate": True,
                 "quiet": True,
-                "cookiefile": kukis,
                 "no_warnings": True,
                 "prefer_ffmpeg": True,
                 "postprocessors": [
