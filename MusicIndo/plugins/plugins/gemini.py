@@ -1,5 +1,5 @@
 import requests
-
+from MukeshAPI import api
 from pyrogram import filters
 from pyrogram.enums import ChatAction
 from MusicIndo import app
@@ -9,7 +9,7 @@ from MusicIndo import app
 async def gemini_handler(client, message):
     await app.send_chat_action(message.chat.id, ChatAction.TYPING)
     if (
-        message.text.startswith(f"/gemini@{app.username}")
+        message. text.startswith(f"/gemini@{app.username}")
         and len(message.text.split(" ", 1)) > 1
     ):
         user_input = message.text.split(" ", 1)[1]
