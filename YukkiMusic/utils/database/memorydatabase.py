@@ -11,6 +11,8 @@
 import config
 from config import PRIVATE_BOT_MODE
 from YukkiMusic.core.mongo import mongodb
+from pytgcalls.types import HighQualityAudio, MediumQualityAudio, LowQualityAudio
+from pytgcalls.types import HighQualityVideo, MediumQualityVideo, LowQualityVideo
 
 channeldb = mongodb.cplaymode
 commanddb = mongodb.commands
@@ -458,15 +460,6 @@ async def maintenance_on():
 
 
 # Audio Video Limit
-
-from pytgcalls.types.input_stream.quality import (HighQualityAudio,
-                                                  HighQualityVideo,
-                                                  LowQualityAudio,
-                                                  LowQualityVideo,
-                                                  MediumQualityAudio,
-                                                  MediumQualityVideo)
-
-
 async def save_audio_bitrate(chat_id: int, bitrate: str):
     audio[chat_id] = bitrate
 
