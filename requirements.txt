@@ -34,7 +34,6 @@ httpx[http2]
 pyfiglet
 lexica-api
 MukeshAPI
-git+https://github.com/noob-mukesh/MukeshAPI
 nekos.py
 telegraph
 uuid

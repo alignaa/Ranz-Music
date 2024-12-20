@@ -1,7 +1,18 @@
+#
+# Copyright (C) 2024 by AnonymousX888@Github, < https://github.com/AnonymousX888 >.
+#
+# This file is part of < https://github.com/hakutakaid/Music-Indo.git > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/hakutakaid/Music-Indo.git/blob/master/LICENSE >
+#
+# All rights reserved.
+#
+
 import asyncio
 import os
 import re
 from typing import Union
+import config
 
 import yt_dlp
 from pyrogram.enums import MessageEntityType
@@ -11,7 +22,6 @@ from youtubesearchpython.__future__ import VideosSearch
 from MusicIndo.utils.database import is_on_off
 from MusicIndo.utils.formatters import time_to_seconds
 
-mycookies = "coklat.txt"
 
 async def shell_cmd(cmd):
     proc = await asyncio.create_subprocess_shell(
@@ -244,13 +254,12 @@ class YouTubeAPI:
 
         def audio_dl():
             ydl_optssx = {
-                "format": "bestaudio/best",
+                "format": "bestaudio/[ext=m4a]",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
-                "cookiefile": mycookies,
             }
             x = yt_dlp.YoutubeDL(ydl_optssx)
             info = x.extract_info(link, False)
@@ -267,7 +276,6 @@ class YouTubeAPI:
                 "geo_bypass": True,
                 "nocheckcertificate": True,
                 "quiet": True,
-                "cookiefile": mycookies,
                 "no_warnings": True,
             }
             x = yt_dlp.YoutubeDL(ydl_optssx)
@@ -287,7 +295,6 @@ class YouTubeAPI:
                 "geo_bypass": True,
                 "nocheckcertificate": True,
                 "quiet": True,
-                "cookiefile": mycookies,
                 "no_warnings": True,
                 "prefer_ffmpeg": True,
                 "merge_output_format": "mp4",
@@ -303,7 +310,6 @@ class YouTubeAPI:
                 "geo_bypass": True,
                 "nocheckcertificate": True,
                 "quiet": True,
-                "cookiefile": mycookies,
                 "no_warnings": True,
                 "prefer_ffmpeg": True,
                 "postprocessors": [
@@ -326,7 +332,7 @@ class YouTubeAPI:
             fpath = f"downloads/{title}.mp3"
             return fpath
         elif video:
-            if await is_on_off(1):
+            if await is_on_off(config.YTDOWNLOADER):
                 direct = True
                 downloaded_file = await loop.run_in_executor(None, video_dl)
             else:
