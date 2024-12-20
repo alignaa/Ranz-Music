@@ -28,7 +28,7 @@ API_HASH = getenv("API_HASH")
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
 
-MUST_JOIN = getenv("MUST_JOIN", "AnonymousX888")
+MUST_JOIN = getenv("MUST_JOIN", "renpresent")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
@@ -105,10 +105,10 @@ GIT_TOKEN = getenv(
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/AnonymousX888"
+    "SUPPORT_CHANNEL", "https://t.me/renpresent"
 )  # Example:- https://t.me/AnonymousX888
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/LogUbotX"
+    "SUPPORT_GROUP", "https://t.me/ranzstre"
 )  # Example:- https://t.me/LogUbotX
 
 
