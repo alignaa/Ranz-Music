@@ -27,6 +27,7 @@ git+https://github.com/yt-dlp/yt-dlp
 git+https://github.com/alexmercerind/youtube-search-python@main
 git+https://github.com/joetats/youtube_search@master
 SafoneAPI
+pymongo==4.9.2
 bing-image-urls
 gTTS
 googlesearch-python
