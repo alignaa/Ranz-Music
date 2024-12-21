@@ -13,7 +13,7 @@ pillow==9.5.0
 psutil
 pytube
 pykeyboard
-pytgcalls==1.0.0
+pytgcalls==0.9.1
 git+https://github.com/pytgcalls/pytgcalls@f8452a50ab7c7d98fe7ca0cb5d4bd8e27b12a8cc
 ntgcalls==1.2.1
 python-dotenv
