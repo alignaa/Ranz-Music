@@ -1,11 +1,11 @@
 #
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
+# Copyright (C) 2024 by AnonymousX888@Github, < https://github.com/AnonymousX888 >.
 #
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
+# This file is part of < https://github.com/hakutakaid/Music-Indo.git > project,
+# and is released under the MIT License.
+# Please see < https://github.com/hakutakaid/Music-Indo.git/blob/master/LICENSE >
 #
-# All rights reserved.
+# All rights reserved
 
 import os
 import sys
@@ -15,7 +15,6 @@ import yaml
 
 languages = {}
 commands = {}
-
 
 languages_present = {}
 
@@ -53,11 +52,9 @@ for filename in os.listdir(r"./strings/langs/"):
             if item not in languages[language_name]:
                 languages[language_name][item] = languages["en"][item]
     try:
-        languages_present[language_name] = languages[language_name][
-            "name"
-        ]
+        languages_present[language_name] = languages[language_name]["name"]
     except:
         print(
-            "There is some issue with the language file inside bot. Please report it to the TeamYukki at @YukkiSupport on Telegram"
+            "There is some issue with the language file inside bot. Please report it to the TheTeamvk at @TheTeamvk on Telegram"
         )
         sys.exit()
