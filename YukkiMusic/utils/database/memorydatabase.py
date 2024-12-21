@@ -11,8 +11,7 @@
 import config
 from config import PRIVATE_BOT_MODE
 from YukkiMusic.core.mongo import mongodb
-from pytgcalls.types import HighQualityAudio, MediumQualityAudio, LowQualityAudio
-from pytgcalls.types import HighQualityVideo, MediumQualityVideo, LowQualityVideo
+from pytgcalls.types import *
 
 channeldb = mongodb.cplaymode
 commanddb = mongodb.commands
