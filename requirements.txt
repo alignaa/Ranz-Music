@@ -23,4 +23,5 @@ spotipy
 tgcrypto
 youtube-search
 youtube-search-python
+git+https://github.com/Noob-mukesh/MukeshAPI
 git+https://github.com/yt-dlp/yt-dlp.git
