@@ -23,7 +23,7 @@ from pyrogram.types import InlineKeyboardMarkup
 from pytgcalls import PyTgCalls, filters
 from pytgcalls.exceptions import *
 from pytgcalls.types import *
-from pytgcalls.types import UpdatedGroupCallParticipant, LeftGroupCallParticipant
+from pytgcalls.types import GroupCallParticipant
 from pytgcalls.types.stream import *
 
 import config
@@ -674,17 +674,16 @@ class Call(PyTgCalls):
         @self.three.on_update(filters.call_participant(GroupCallParticipant.Action.UPDATED))
         @self.four.on_update(filters.call_participant(GroupCallParticipant.Action.UPDATED))
         @self.five.on_update(filters.call_participant(GroupCallParticipant.Action.UPDATED))
-        async def participants_change_handler(client, update: Update):
-            if not isinstance(update, UpdatedGroupCallParticipant) and not isinstance(
-                update, LeftGroupCallParticipant
-            ):
-                return
+        
+        async def participants_change_handler(client, update: GroupCallParticipant):
             chat_id = update.chat_id
             users = counter.get(chat_id)
+            
             if not users:
                 try:
                     got = len(await client.get_participants(chat_id))
-                except:
+                except Exception as e:
+                    print(f"Error getting participants: {e}")
                     return
                 counter[chat_id] = got
                 if got == 1:
@@ -692,16 +691,16 @@ class Call(PyTgCalls):
                     return
                 autoend[chat_id] = {}
             else:
-                final = (
-                    users + 1
-                    if isinstance(update, UpdatedGroupCallParticipant)
-                    else users - 1
-                )
+                if update.muted or update.left:  # Asumsi: peserta meninggalkan panggilan atau dimatikan
+                    final = users - 1
+                else:
+                    final = users + 1
                 counter[chat_id] = final
                 if final == 1:
                     autoend[chat_id] = datetime.now() + timedelta(minutes=AUTO_END_TIME)
                     return
                 autoend[chat_id] = {}
+
 
 
 Yukki = Call()
