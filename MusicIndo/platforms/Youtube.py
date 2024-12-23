@@ -124,6 +124,7 @@ class YouTubeAPI:
             "yt-dlp",
             "-g",
             "-f",
+            "--cookies", mycookies,
             "best[height<=?720][width<=?1280]",
             f"{link}",
             stdout=asyncio.subprocess.PIPE,
