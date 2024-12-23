@@ -16,7 +16,6 @@ from MusicIndo.utils.decorators import AdminRightsCheck
 
 from config import BANNED_USERS
 
-
 @app.on_message(
     filters.command(["cplayer", "playing", "cplaying", "player"])
     & filters.group
