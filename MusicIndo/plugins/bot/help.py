@@ -172,7 +172,7 @@ async def help_button(client, query):
         module = mod_match.group(1)
         prev_page_num = int(mod_match.group(2))
         text = (
-            f"<b><u>ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʜᴇʟᴘ ꜰᴏʀ {HELPABLE[module].__MODULE__}:</u></b>\n"
+            f"<b>ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʜᴇʟᴘ ꜰᴏʀ {HELPABLE[module].__MODULE__}:</b>\n\n"
             + HELPABLE[module].__HELP__
         )
 
@@ -188,7 +188,7 @@ async def help_button(client, query):
         )
 
         await query.message.edit(
-            text=text,
+            text=text  + f"<b>©️ {app.me.mention}</b>",
             reply_markup=key,
             disable_web_page_preview=True,
         )
