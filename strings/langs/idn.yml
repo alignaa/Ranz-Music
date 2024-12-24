@@ -1,0 +1,10 @@
+name : 🇮🇩 ɪɴᴅᴏɴᴇꜱɪᴀ
+
+# General
+general_1 : "Membalas pesan pengguna atau memberikan username/user_id."
+general_2 : "Error!  penggunaan perintah yang salah."
+general_3 : "Beberapa pengecualian terjadi saat memproses query Anda, jenis pengecualian."
+general_4 : "Anda adalah admin anonim di grup obrolan ini!, kembali ke akun pengguna untuk mendapatkan hak admin."
+general_5 : "Anda harus menjadi admin yang mengelola hak obrolan video untuk melakukan tindakan ini."
+general_6 : "bot tidak streaming di obrolan video."
+force_sub : ""
