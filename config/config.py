@@ -42,7 +42,7 @@ CLEANMODE_DELETE_MINS = int(
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 
 DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "60")
+    getenv("DURATION_LIMIT", "120")
 )  # Remember to give value in Minutes
 
 
@@ -68,7 +68,7 @@ EXTRA_PLUGINS_FOLDER = getenv("EXTRA_PLUGINS_FOLDER", "plugins")
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
 SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "60")
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "120")
 )  # Remember to give value in Minutes
 
 
@@ -207,7 +207,7 @@ autoclean = []
 
 START_IMG_URL = getenv(
     "START_IMG_URL",
-    "https://telegra.ph//file/18c5a2c300b9bea7c76f1.jpg",
+    "https://deposit.pictures/p/6d4015502a97454dae7c66e73f0eedc9",
 )
 
 PING_IMG_URL = getenv(
