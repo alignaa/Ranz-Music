@@ -48,5 +48,9 @@ async def fkadress(_, message):
 
 __MODULE__ = "ꜰᴀᴋᴇ"
 __HELP__ = """
+<blockquote>
+➢ <b>ꜰᴀᴋᴇ ᴄᴏᴍᴍᴀɴᴅꜱ</b>
 
-/fake [ᴄᴏᴜɴᴛʀʏ ɴᴀᴍᴇ ] - ᴛᴏ ɢᴇᴛ ʀᴀɴᴅᴏᴍ ᴀᴅᴅʀᴇꜱꜱ"""
+`/fake [ᴄᴏᴜɴᴛʀʏ ɴᴀᴍᴇ ]` - ᴛᴏ ɢᴇᴛ ʀᴀɴᴅᴏᴍ ᴀᴅᴅʀᴇꜱꜱ
+</blockquote>
+"""

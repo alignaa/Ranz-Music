@@ -67,7 +67,8 @@ async def bored_command(client, message):
 
 __MODULE__ = "ꜰᴜɴ"
 __HELP__ = """
-**ʜᴀᴠɪɴɢ ꜰᴜɴ:**
+<blockquote>
+➢ <b>ꜰᴜɴ ᴄᴏᴍᴍᴀɴᴅꜱ</b>
 
 `/dice`: ʀᴏʟʟꜱ ᴀ ᴅɪᴄᴇ.
 `/ludo`: ᴘʟᴀʏ ʟᴜᴅᴏ.
@@ -76,5 +77,6 @@ __HELP__ = """
 `/football`: ᴘʟᴀʏꜱ ғᴏᴏᴛʙᴀʟʟ.
 `/slot` ᴏʀ `/jackpot`: ᴘʟᴀʏꜱ ᴊᴀᴄᴋᴘᴏᴛ.
 `/bowling`: ᴘʟᴀʏꜱ ʙᴏᴡʟɪɴɢ.
-•`/bored`: ɢᴇᴛꜱ ʀᴀɴᴅᴏᴍ ᴀᴄᴛɪᴠɪᴛʏ ɪғ ʏᴏᴜ'ʀᴇ ʙᴏʀᴇᴅ.
+`/bored`: ɢᴇᴛꜱ ʀᴀɴᴅᴏᴍ ᴀᴄᴛɪᴠɪᴛʏ ɪғ ʏᴏᴜ'ʀᴇ ʙᴏʀᴇᴅ.
+</blockquote>
 """
