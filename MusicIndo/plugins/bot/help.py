@@ -172,7 +172,7 @@ async def help_button(client, query):
         module = mod_match.group(1)
         prev_page_num = int(mod_match.group(2))
         text = (
-            f"<b>ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʜᴇʟᴘ ꜰᴏʀ {HELPABLE[module].__MODULE__}:</b>\n\n"
+            f"<b>ʜᴇʟᴘ ꜰᴏʀ {HELPABLE[module].__MODULE__}:</b>\n\n"
             + HELPABLE[module].__HELP__
         )
 

@@ -29,5 +29,10 @@ async def advice(_, message):
 
 __MODULE__ = "ᴀᴅᴠɪᴄᴇ"
 __HELP__ = """
+<blockquote>
+➢ <b>ᴀᴅᴠɪᴄᴇ ᴄᴏᴍᴍᴀɴᴅꜱ</b>
+
 /advice - ɢᴇᴛ ʀᴀɴᴅᴏᴍ ᴀᴅᴠɪᴄᴇ
-/astronomical - ᴛᴏ ɢᴇᴛ ᴛᴏᴅᴀʏ'ꜱ ᴀꜱᴛʀᴏɴᴏᴍɪᴄᴀʟ ғᴀᴄᴛ"""
+/astronomical - ᴛᴏ ɢᴇᴛ ᴛᴏᴅᴀʏ'ꜱ ᴀꜱᴛʀᴏɴᴏᴍɪᴄᴀʟ ғᴀᴄᴛ
+</blockquote>
+"""

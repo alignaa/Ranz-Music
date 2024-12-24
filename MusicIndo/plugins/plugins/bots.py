@@ -31,7 +31,9 @@ async def bots(client, message):
 
 __MODULE__ = "ʙᴏᴛꜱ"
 __HELP__ = """
-<b>ʙᴏᴛꜱ</b>
+<blockquote>
+➢ <b>ʙᴏᴛꜱ ᴄᴏᴍᴍᴀɴᴅꜱ</b>
 
-/bots - ɢᴇᴛ ᴀ ʟɪꜱᴛ ᴏғ ʙᴏᴛꜱ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
+`/bots` - ɢᴇᴛ ᴀ ʟɪꜱᴛ ᴏғ ʙᴏᴛꜱ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
+</blockquote>
 """
