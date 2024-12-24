@@ -15,9 +15,9 @@ async def hastag(bot, message):
     await message.reply_text(f"ʜᴇʀᴇ ɪs ʏᴏᴜʀ  ʜᴀsᴛᴀɢ :\n<pre>{res}</pre>", quote=True)
 
 
-__MODULE__ = "Hᴀsʜᴛᴀɢ"
+__MODULE__ = "ʜᴀꜱʜᴛᴀɢ"
 __HELP__ = """
-**ʜᴀsʜᴛᴀɢ ɢᴇɴᴇʀᴀᴛᴏʀ:**
+<b>ʜᴀsʜᴛᴀɢ ɢᴇɴᴇʀᴀᴛᴏʀ:</b>
 
-• `/hashtag [text]`: Gᴇɴᴇʀᴀᴛᴇ ʜᴀsʜᴛᴀɢs ғᴏʀ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ.
+• `/hashtag [text]`: ɢᴇɴᴇʀᴀᴛᴇ ʜᴀꜱʜᴛᴀɢꜱ ғᴏʀ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ.
 """

@@ -151,11 +151,11 @@ async def authusers(client, message: Message, _):
         await message.reply_text(text)
 
 
-__MODULE__ = "Auᴛʜ"
-__HELP__ = """<blockquote><b><u>Aᴜᴛʜ Usᴇʀs:</u></b>
-Aᴜᴛʜ Usᴇʀs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴡɪᴛʜᴏᴜᴛ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.
+__MODULE__ = "ᴀᴜᴛʜ"
+__HELP__ = """<blockquote><b><u>ᴀᴜᴛʜ ᴜꜱᴇʀꜱ:</u></b>
+ᴀᴜᴛʜ ᴜꜱᴇʀꜱ ᴄᴀɴ ᴜꜱᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ ᴡɪᴛʜᴏᴜᴛ ᴀᴅᴍɪɴ ʀɪɢʜᴛꜱ ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.
 
-/auth [Usᴇʀɴᴀᴍᴇ] - Aᴅᴅ ᴀ ᴜsᴇʀ ᴛᴏ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-/unauth [Usᴇʀɴᴀᴍᴇ] - Rᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-/authusers - Cʜᴇᴄᴋ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.</blockquote
+/auth [ᴜꜱᴇʀɴᴀᴍᴇ] - ᴀᴅᴅ ᴀ ᴜꜱᴇʀ ᴛᴏ ᴀᴜᴛʜ ʟɪꜱᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
+/unauth [ᴜꜱᴇʀɴᴀᴍᴇ] - ʀᴇᴍᴏᴠᴇ ᴀ ᴜꜱᴇʀ ғʀᴏᴍ ᴀᴜᴛʜ ʟɪꜱᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
+/authusers - ᴄʜᴇᴄᴋ ᴀᴜᴛʜ ʟɪꜱᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.</blockquote
 """

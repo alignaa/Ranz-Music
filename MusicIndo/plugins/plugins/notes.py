@@ -383,13 +383,13 @@ async def delete_all_cb(_, cb):
         await cb.message.delete()
 
 
-__MODULE__ = "Nᴏᴛᴇs"
+__MODULE__ = "ɴᴏᴛᴇꜱ"
 __HELP__ = """
 **ɴᴏᴛᴇꜱ:**
 
-• `/save [NOTE_NAME] [CONTENT]`: Sᴀᴠᴇs ᴀ ɴᴏᴛᴇ ᴡɪᴛʜ ᴛʜᴇ ɢɪᴠᴇɴ ɴᴀᴍᴇ ᴀɴᴅ ᴄᴏɴᴛᴇɴᴛ.
-• `/notes`: Sʜᴏᴡs ᴀʟʟ sᴀᴠᴇᴅ ɴᴏᴛᴇꜱ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
-• `/get [NOTE_NAME]`: Gᴇᴛs ᴛʜᴇ ᴄᴏɴᴛᴇɴᴛ ᴏғ ᴀ sᴀᴠᴇᴅ ɴᴏᴛᴇ.
-• `/delete [NOTE_NAME]`: Dᴇʟᴇᴛᴇs ᴀ sᴀᴠᴇᴅ ɴᴏᴛᴇ.
-• `/deleteall`: Dᴇʟᴇᴛᴇs ᴀʟʟ sᴀᴠᴇᴅ ɴᴏᴛᴇꜱ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+`/save [NOTE_NAME] [CONTENT]`: ꜱᴀᴠᴇꜱ ᴀ ɴᴏᴛᴇ ᴡɪᴛʜ ᴛʜᴇ ɢɪᴠᴇɴ ɴᴀᴍᴇ ᴀɴᴅ ᴄᴏɴᴛᴇɴᴛ.
+`/notes`: ꜱʜᴏᴡꜱ ᴀʟʟ ꜱᴀᴠᴇᴅ ɴᴏᴛᴇꜱ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+`/get [NOTE_NAME]`: ɢᴇᴛꜱ ᴛʜᴇ ᴄᴏɴᴛᴇɴᴛ ᴏғ ᴀ ꜱᴀᴠᴇᴅ ɴᴏᴛᴇ.
+`/delete [NOTE_NAME]`: ᴅᴇʟᴇᴛᴇꜱ ᴀ ꜱᴀᴠᴇᴅ ɴᴏᴛᴇ.
+`/deleteall`: ᴅᴇʟᴇᴛᴇꜱ ᴀʟʟ ꜱᴀᴠᴇᴅ ɴᴏᴛᴇꜱ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
 """

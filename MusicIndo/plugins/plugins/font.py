@@ -2548,9 +2548,7 @@ async def style(c, m):
     except BaseException:
         pass
 
-
+__MODULE__ = "ꜰᴏɴᴛ"
 __HELP__ = """
-• /font [text] - ᴄᴏɴᴠᴇʀᴛs sɪᴍᴩʟᴇ ᴛᴇxᴛ ᴛᴏ ʙᴇᴀᴜᴛɪғᴜʟ ᴛᴇxᴛ ʙʏ ᴄʜᴀɴɢɪɴɢ ɪᴛ's ғᴏɴᴛ.
+/font [ᴛᴇxᴛ] - ᴄᴏɴᴠᴇʀᴛꜱ ꜱɪᴍᴩʟᴇ ᴛᴇxᴛ ᴛᴏ ʙᴇᴀᴜᴛɪғᴜʟ ᴛᴇxᴛ ʙʏ ᴄʜᴀɴɢɪɴɢ ɪᴛ'ꜱ ғᴏɴᴛ.
  """
-
-__MODULE__ = "Fᴏɴᴛ"

@@ -30,33 +30,34 @@ from config import BANNED_USERS
 
 warnsdb = mongodb.warns
 
-__MODULE__ = "Bᴀɴ"
+__MODULE__ = "ʙᴀɴ"
 __HELP__ = """
-/ban - Ban A User
-/sban - Delete all messages of user that sended in group and ban the user
-/tban - Ban A User For Specific Time
-/unban - Unban A User
-/warn - Warn A User
-/swarn - Delete all the message sended in group and warn the user
-/rmwarns - Remove All Warning of A User
-/warns - Show Warning Of A User
-/kick - Kick A User
-/skick - Delete the replied message kicking its sender
-/purge - Purge Messages
-/purge [n] - Purge "n" number of messages from replied message
-/del - Delete Replied Message
-/promote - Promote A Member
-/fullpromote - Promote A Member With All Rights
-/demote - Demote A Member
-/pin - Pin A Message
-/unpin - unpin a message
-/unpinall - unpinall messages
-/mute - Mute A User
-/tmute - Mute A User For Specific Time
-/unmute - Unmute A User
-/zombies - Ban Deleted Accounts
-/report | @admins | @admin - Report A Message To Admins.
-/link - Send in Group/SuperGroup Invite Link."""
+/ban - ʙᴀɴ ᴀ ᴜꜱᴇʀ.
+/sban - ᴅᴇʟᴇᴛᴇ ᴀʟʟ ᴍᴇꜱꜱᴀɢᴇꜱ ᴏꜰ ᴜꜱᴇʀ ᴛʜᴀᴛ ꜱᴇɴᴅᴇᴅ ɪɴ ɢʀᴏᴜᴘ ᴀɴᴅ ʙᴀɴ ᴛʜᴇ ᴜꜱᴇʀ.
+/tban - ʙᴀɴ ᴀ ᴜꜱᴇʀ ꜰᴏʀ ꜱᴘᴇᴄɪꜰɪᴄ ᴛɪᴍᴇ.
+/unban - ᴜɴʙᴀɴ ᴀ ᴜꜱᴇʀ.
+/warn - ᴡᴀʀɴ ᴀ ᴜꜱᴇʀ.
+/swarn - ᴅᴇʟᴇᴛᴇ ᴀʟʟ ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ ꜱᴇɴᴅᴇᴅ ɪɴ ɢʀᴏᴜᴘ ᴀɴᴅ ᴡᴀʀɴ ᴛʜᴇ ᴜꜱᴇʀ.
+/rmwarns - ʀᴇᴍᴏᴠᴇ ᴀʟʟ ᴡᴀʀɴɪɴɢ ᴏꜰ ᴀ ᴜꜱᴇʀ.
+/warns - ꜱʜᴏᴡ ᴡᴀʀɴɪɴɢ ᴏꜰ ᴀ ᴜꜱᴇʀ.
+/kick - ᴋɪᴄᴋ ᴀ ᴜꜱᴇʀ.
+/skick - ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴍᴇꜱꜱᴀɢᴇ ᴋɪᴄᴋɪɴɢ ɪᴛꜱ ꜱᴇɴᴅᴇʀ.
+/purge - ᴘᴜʀɢᴇ ᴍᴇꜱꜱᴀɢᴇꜱ.
+/purge - ᴘᴜʀɢᴇ "n" ɴᴜᴍʙᴇʀ ᴏꜰ ᴍᴇꜱꜱᴀɢᴇꜱ ꜰʀᴏᴍ ʀᴇᴘʟɪᴇᴅ ᴍᴇꜱꜱᴀɢᴇ.
+/del - ᴅᴇʟᴇᴛᴇ ʀᴇᴘʟɪᴇᴅ ᴍᴇꜱꜱᴀɢᴇ.
+/promote - ᴘʀᴏᴍᴏᴛᴇ ᴀ ᴍᴇᴍʙᴇʀ.
+/fullpromote - ᴘʀᴏᴍᴏᴛᴇ ᴀ ᴍᴇᴍʙᴇʀ ᴡɪᴛʜ ᴀʟʟ ʀɪɢʜᴛꜱ.
+/demote - ᴅᴇᴍᴏᴛᴇ ᴀ ᴍᴇᴍʙᴇʀ.
+/pin - ᴘɪɴ ᴀ ᴍᴇꜱꜱᴀɢᴇ.
+/unpin - ᴜɴᴘɪɴ ᴀ ᴍᴇꜱꜱᴀɢᴇ.
+/unpinall - ᴜɴᴘɪɴᴀʟʟ ᴍᴇꜱꜱᴀɢᴇꜱ.
+/mute - ᴍᴜᴛᴇ ᴀ ᴜꜱᴇʀ.
+/tmute - ᴍᴜᴛᴇ ᴀ ᴜꜱᴇʀ ꜰᴏʀ ꜱᴘᴇᴄɪꜰɪᴄ ᴛɪᴍᴇ.
+/unmute - ᴜɴᴍᴜᴛᴇ ᴀ ᴜꜱᴇʀ.
+/zombies - ʙᴀɴ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛꜱ.
+/report | @admins | @admin - ʀᴇᴘᴏʀᴛ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴀᴅᴍɪɴꜱ.
+/link - ꜱᴇɴᴅ ɪɴ ɢʀᴏᴜᴘ/ꜱᴜᴘᴇʀɢʀᴏᴜᴘ ɪɴᴠɪᴛᴇ ʟɪɴᴋ.
+"""
 
 
 async def int_to_alpha(user_id: int) -> str:

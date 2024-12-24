@@ -215,16 +215,16 @@ async def goodbye(client, message: Message):
 
         else:
             await message.reply_text(
-                "Iɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ. Pʟᴇᴀsᴇ ᴜsᴇ:\n"
-                "/goodbye - Tᴏ ɢᴇᴛ ʏᴏᴜʀ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ\n"
+                "ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ. ᴘʟᴇᴀꜱᴇ ᴜꜱᴇ:\n"
+                "/goodbye - ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ\n"
                 "/goodbye [on, y, true, enable, t] - ᴛᴏ ᴛᴜʀɴ ᴏɴ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs\n"
                 "/goodbye [off, n, false, disable, f, no] - ᴛᴏ ᴛᴜʀɴ ᴏғғ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs\n"
                 "/delgoodbye ᴏʀ /deletegoodbye ᴛᴏ ᴅᴇʟᴛᴇ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ ᴀɴᴅ ᴛᴜʀɴ ᴏғғ ɢᴏᴏᴅʙʏᴇ"
             )
     else:
         await message.reply_text(
-            "Iɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ. Pʟᴇᴀsᴇ ᴜsᴇ:\n"
-            "/goodbye - Tᴏ ɢᴇᴛ ʏᴏᴜʀ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ\n"
+            "ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ. ᴘʟᴇᴀꜱᴇ ᴜꜱᴇ:\n"
+            "/goodbye - ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ\n"
             "/goodbye [on, y, true, enable, t] - ᴛᴏ ᴛᴜʀɴ ᴏɴ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs\n"
             "/goodbye [off, n, false, disable, f, no] - ᴛᴏ ᴛᴜʀɴ ᴏғғ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs\n"
             "/delgoodbye ᴏʀ /deletegoodbye ᴛᴏ ᴅᴇʟᴛᴇ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ ᴀɴᴅ ᴛᴜʀɴ ᴏғғ ɢᴏᴏᴅʙʏᴇ"
@@ -236,10 +236,10 @@ async def get_goodbye_func(_, message):
     goodbye, raw_text, file_id = await get_goodbye(chat.id)
     if not raw_text:
         return await message.reply_text(
-            "Dɪᴅ Yᴏᴜ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ʏᴏᴜ ʜᴀᴠᴇ sᴇᴛ's ᴀɴᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ"
+            "ᴅɪᴅ ʏᴏᴜ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ʏᴏᴜ ʜᴀᴠᴇ ꜱᴇᴛ'ꜱ ᴀɴᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ"
         )
     if not message.from_user:
-        return await message.reply_text("Yᴏᴜ'ʀᴇ ᴀɴᴏɴ, ᴄᴀɴ'ᴛ sᴇɴᴅ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ.")
+        return await message.reply_text("ʏᴏᴜ'ʀᴇ ᴀɴᴏɴ, ᴄᴀɴ'ᴛ ꜱᴇɴᴅ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ.")
 
     await send_left_message(chat, message.from_user.id)
     is_grt = await is_greetings_on(chat.id, "goodbye")
@@ -249,40 +249,34 @@ async def get_goodbye_func(_, message):
     else:
         text = "Fᴀʟsᴇ"
     await message.reply_text(
-        f'I ᴀᴍ ᴄᴜʀʀᴇɴᴛʟʏ sᴀʏɪɴɢ ɢᴏᴏᴅʙʏᴇ ᴛᴏ ᴜsᴇʀs :- {text}\nGᴏᴏᴅʙʏᴇ: {goodbye}\n\nғɪʟᴇ_ɪᴅ: `{file_id}`\n\n`{raw_text.replace("`", "")}`'
+        f'ɪ ᴀᴍ ᴄᴜʀʀᴇɴᴛʟʏ ꜱᴀʏɪɴɢ ɢᴏᴏᴅʙʏᴇ ᴛᴏ ᴜꜱᴇʀꜱ :- {text}\nGᴏᴏᴅʙʏᴇ: {goodbye}\n\nғɪʟᴇ_ɪᴅ: `{file_id}`\n\n`{raw_text.replace("`", "")}`'
     )
 
 
-__MODULE__ = "Gᴏᴏᴅʙʏᴇ"
+__MODULE__ = "ɢᴏᴏᴅʙʏᴇ"
 __HELP__ = """
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ɢᴏᴏᴅʙʏᴇ:
+ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ɢᴏᴏᴅʙʏᴇ:
 
-/setgoodbye - Rᴇᴘʟʏ ᴛʜɪs ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴄᴏɴᴛᴀɪɴɪɴɢ ᴄᴏʀʀᴇᴄᴛ
-ғᴏʀᴍᴀᴛ ғᴏʀ ᴀ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ, ᴄʜᴇᴄᴋ ᴇɴᴅ ᴏғ ᴛʜɪs ᴍᴇssᴀɢᴇ.
-
-/goodbye - Tᴏ ɢᴇᴛ ʏᴏᴜʀ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ
-
-/goodbye  [ᴏɴ, ʏ, ᴛʀᴜᴇ, ᴇɴᴀʙʟᴇ, ᴛ] - ᴛᴏ ᴛᴜʀɴ ᴏɴ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs
-
+/setgoodbye - ʀᴇᴘʟʏ ᴛʜɪꜱ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴄᴏɴᴛᴀɪɴɪɴɢ ᴄᴏʀʀᴇᴄᴛ
+ғᴏʀᴍᴀᴛ ғᴏʀ ᴀ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ, ᴄʜᴇᴄᴋ ᴇɴᴅ ᴏғ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ.
+/goodbye - ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ
+/goodbye  [ᴏɴ, ʏ, ᴛʀᴜᴇ, ᴇɴᴀʙʟᴇ, ᴛ] - ᴛᴏ ᴛᴜʀɴ ᴏɴ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇꜱ
 /goodbye [ᴏғғ, ɴ, ғᴀʟsᴇ, ᴅɪsᴀʙʟᴇ, ғ, ɴᴏ] - ᴛᴏ ᴛᴜʀɴ ᴏғғ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs
-
 /delgoodbye ᴏʀ /deletegoodbye ᴛᴏ ᴅᴇʟᴛᴇ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ ᴀɴᴅ ᴛᴜʀɴ ᴏғғ ɢᴏᴏᴅʙʏᴇ
-**SetoodBye ->
 
+<b>ꜱᴇᴛᴏᴏᴅʙʏᴇ</b> ->
+ᴛᴏ ꜱᴇᴛ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ɢɪғ ᴀꜱ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ. ᴀᴅᴅ ʏᴏᴜʀ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ ᴀꜱ ᴄᴀᴘᴛɪᴏɴ ᴛᴏ ᴛʜᴇ ᴘʜᴏᴛᴏ ᴏʀ ɢɪғ. ᴛʜᴇ ᴄᴀᴘᴛɪᴏɴ ᴍᴜꜱᴇ ʙᴇ ɪɴ ᴛʜᴇ ғᴏʀᴍᴀᴛ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.**
+ꜰᴏʀ ᴛᴇxᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ ᴊᴜꜱᴛ ꜱᴇɴᴅ ᴛʜᴇ ᴛᴇxᴛ. ᴛʜᴇɴ ʀᴇᴘʟʏ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ
+ᴛʜᴇ ғᴏʀᴍᴀᴛ ꜱʜᴏᴜʟᴅ ʙᴇ ꜱᴏᴍᴇᴛʜɪɴɢ ʟɪᴋᴇ ʙᴇʟᴏᴡ.
 
-Tᴏ sᴇᴛ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ɢɪғ ᴀs ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ. Aᴅᴅ ʏᴏᴜʀ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ ᴀs ᴄᴀᴘᴛɪᴏɴ ᴛᴏ ᴛʜᴇ ᴘʜᴏᴛᴏ ᴏʀ ɢɪғ. Tʜᴇ ᴄᴀᴘᴛɪᴏɴ ᴍᴜsᴇ ʙᴇ ɪɴ ᴛʜᴇ ғᴏʀᴍᴀᴛ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.**
+ʜɪ {NAME} [{ID}] ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {GROUPNAME}
 
-Fᴏʀ ᴛᴇxᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ Jᴜsᴛ sᴇɴᴅ ᴛʜᴇ ᴛᴇxᴛ. Tʜᴇɴ ʀᴇᴘʟʏ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ
-
-Tʜᴇ ғᴏʀᴍᴀᴛ sʜᴏᴜʟᴅ ʙᴇ sᴏᴍᴇᴛʜɪɴɢ ʟɪᴋᴇ ʙᴇʟᴏᴡ.
-
-Hɪ {NAME} [{ID}] Wᴇʟᴄᴏᴍᴇ ᴛᴏ {GROUPNAME}
-
-~ #Tʜɪs sᴇᴘᴀʀᴀᴛᴇʀ (~) sʜᴏᴜʟᴅ ʙᴇ ᴛʜᴇʀᴇ ʙᴇᴛᴡᴇᴇɴ ᴛᴇxᴛ ᴀɴᴅ ʙᴜᴛᴛᴏɴs, ʀᴇᴍᴏᴠᴇ ᴛʜɪs ᴄᴏᴍᴍᴇɴᴛ ᴀʟsᴏ
+~ #ᴛʜɪꜱ ꜱᴇᴘᴀʀᴀᴛᴇʀ (~) ꜱʜᴏᴜʟᴅ ʙᴇ ᴛʜᴇʀᴇ ʙᴇᴛᴡᴇᴇɴ ᴛᴇxᴛ ᴀɴᴅ ʙᴜᴛᴛᴏɴꜱ, ʀᴇᴍᴏᴠᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴇɴᴛ ᴀʟꜱᴏ
 
 Button=[Dᴜᴄᴋ, ʜᴛᴛᴘs://ᴅᴜᴄᴋᴅᴜᴄᴋɢᴏ.ᴄᴏᴍ]
 Button2=[Gɪᴛʜᴜʙ, ʜᴛᴛᴘs://ɢɪᴛʜᴜʙ.ᴄᴏᴍ]
-**NOTES ->**
 
-Cʜᴇᴄᴋᴏᴜᴛ /markdownhelp ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ғᴏʀᴍᴀᴛᴛɪɴɢs ᴀɴᴅ ᴏᴛʜᴇʀ sʏɴᴛᴀx.
+<b>ɴᴏᴛᴇꜱ -></b>
+
+ᴄʜᴇᴄᴋᴏᴜᴛ /markdownhelp ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ғᴏʀᴍᴀᴛᴛɪɴɢꜱ ᴀɴᴅ ᴏᴛʜᴇʀ ꜱʏɴᴛᴀx.
 """
