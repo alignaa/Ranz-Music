@@ -310,7 +310,7 @@ async def welcome(client, message: Message):
 __MODULE__ = "ʙᴏᴛ"
 __HELP__ = f"""
 <blockquote>
-➢ <b>ᴄᴏᴍᴍᴀɴᴅꜱ ʙᴏᴛ</b>
+➢ <b>ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ/b>
 
 `/stats` - ɢᴇᴛ ᴛᴏᴘ 𝟷𝟶 ᴛʀᴀᴄᴋꜱ ɢʟᴏʙᴀʟ ꜱᴛᴀᴛꜱ, ᴛᴏᴘ 𝟷𝟶 ᴜꜱᴇʀꜱ ᴏғ ʙᴏᴛ, ᴛᴏᴘ 𝟷𝟶 ᴄʜᴀᴛꜱ ᴏɴ ʙᴏᴛ, ᴛᴏᴘ 𝟷𝟶 ᴘʟᴀʏᴇᴅ ɪɴ ᴀ ᴄʜᴀᴛ ᴇᴛᴄ ᴇᴛᴄ.
 `/sudolist` - ᴄʜᴇᴄᴋ ꜱᴜᴅᴏ ᴜꜱᴇʀꜱ ᴏғ {app.mention}
