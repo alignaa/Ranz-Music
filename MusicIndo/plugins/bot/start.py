@@ -59,7 +59,7 @@ async def start_with_must_join(client, message: Message, _):
             photo=MUST_JOIN_IMG,
             caption= f"<blockquote>{_['start_8'].format(bot_name)}</blockquote>",
             reply_markup=join_button,
-            parse_mode=ParseMode.MARKDOWN,
+            parse_mode=ParseMode.HTML,
         )
 
 @app.on_message(filters.command(["start"]) & filters.private & is_subscriber & ~BANNED_USERS)
