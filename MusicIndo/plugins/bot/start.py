@@ -48,22 +48,6 @@ async def start_comm(client, message: Message, _):
     chat_id = message.chat.id
     await add_served_user(message.from_user.id)
     
-    if config.MUST_JOIN:
-            try:
-                await app.get_chat_member(config.MUST_JOIN, message.from_user.id)
-            except UserNotParticipant:
-                sub = await app.export_chat_invite_link(config.MUST_JOIN)
-                kontol = InlineKeyboardMarkup(
-                    [
-                        [InlineKeyboardButton("📑 Gabung Dulu", url=sub)]
-                    ]
-                )
-                return await message.reply_photo(
-                    photo=MUST_JOIN_IMG,
-                    caption=_["start_8"],
-                    reply_markup=kontol,
-                )
-    
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
