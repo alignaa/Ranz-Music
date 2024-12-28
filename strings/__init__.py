@@ -35,26 +35,35 @@ for filename in os.listdir(r"./strings"):
         )
 
 
-for filename in os.listdir(r"./strings/langs/"):
-    if "idn" not in languages:
-        languages["idn"] = yaml.safe_load(
-            open(r"./strings/langs/idn.yml", encoding="utf8")
-        )
-        languages_present["idn"] = languages["idn"]["name"]
+for filename in os.listdir(r"./strings"):
     if filename.endswith(".yml"):
         language_name = filename[:-4]
-        if language_name == "idn":
-            continue
+        commands[language_name] = yaml.safe_load(
+            open(r"./strings/" + filename, encoding="utf8")
+        )
+
+for filename in os.listdir(r"./strings/langs/"):
+    if "id" not in languages:
+        # Memuat bahasa default (id) terlebih dahulu
+        languages["id"] = yaml.safe_load(
+            open(r"./strings/langs/id.yml", encoding="utf8")
+        )
+        languages_present["id"] = languages["id"]["name"]
+    if filename.endswith(".yml"):
+        language_name = filename[:-4]
+        if language_name == "id":
+            continue  # Lewati karena sudah dimuat sebagai default
         languages[language_name] = yaml.safe_load(
             open(r"./strings/langs/" + filename, encoding="utf8")
         )
-        for item in languages["idn"]:
+        # Tambahkan kunci yang hilang dari bahasa default (id)
+        for item in languages["id"]:
             if item not in languages[language_name]:
-                languages[language_name][item] = languages["idn"][item]
+                languages[language_name][item] = languages["id"][item]
     try:
         languages_present[language_name] = languages[language_name]["name"]
     except:
         print(
-            "There is some issue with the language file inside bot. Please report it to the TheTeamvk at @TheTeamvk on Telegram"
+            "There is some issue with the language file inside bot. Please report it to the TeamYukki at @YukkiSupport on Telegram"
         )
         sys.exit()
