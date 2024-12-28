@@ -53,14 +53,12 @@ async def start_with_must_join(client, message: Message, _):
             [[InlineKeyboardButton("📑 Gabung Dulu", url=invite_link)]]
         )
 
-        user = message.from_user.mention
-
         bot_user = await client.get_me()
         bot_name = bot_user.mention
 
         return await message.reply_photo(
             photo=MUST_JOIN_IMG,
-            caption= f"<blockquote>{_['start_8'].format(user, bot_name)}</blockquote>",
+            caption= f"<blockquote>{_['start_8'].format(bot_name)}</blockquote>",
             reply_markup=join_button,
             parse_mode=ParseMode.HTML,
         )
