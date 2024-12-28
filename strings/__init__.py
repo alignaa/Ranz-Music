@@ -44,7 +44,6 @@ for filename in os.listdir(r"./strings"):
 
 for filename in os.listdir(r"./strings/langs/"):
     if "id" not in languages:
-        # Memuat bahasa default (id) terlebih dahulu
         languages["id"] = yaml.safe_load(
             open(r"./strings/langs/id.yml", encoding="utf8")
         )

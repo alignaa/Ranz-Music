@@ -16,7 +16,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 from pyrogram.errors import UserNotParticipant
 import config
-from config import BANNED_USERS, START_IMG_URL
+from config import BANNED_USERS, START_IMG_URL, MUST_JOIN_IMG
 from config.config import OWNER_ID
 from strings import get_string
 from MusicIndo import Telegram, YouTube, app
@@ -47,6 +47,23 @@ loop = asyncio.get_running_loop()
 async def start_comm(client, message: Message, _):
     chat_id = message.chat.id
     await add_served_user(message.from_user.id)
+    
+    if config.MUST_JOIN:
+            try:
+                await app.get_chat_member(config.MUST_JOIN, message.from_user.id)
+            except UserNotParticipant:
+                sub = await app.export_chat_invite_link(config.MUST_JOIN)
+                kontol = InlineKeyboardMarkup(
+                    [
+                        [InlineKeyboardButton("📑 Gabung Dulu", url=sub)]
+                    ]
+                )
+                return await message.reply_photo(
+                    photo=MUST_JOIN_IMG,
+                    caption=_["start_8"],
+                    reply_markup=kontol,
+                )
+    
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
@@ -203,32 +220,6 @@ async def start_comm(client, message: Message, _):
                     config.LOG_GROUP_ID,
                     f"{message.from_user.mention} ʜᴀs ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ<code> ᴠɪᴅᴇᴏ ɪɴғᴏʀᴍᴀᴛɪᴏɴ </code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀ ɴᴀᴍᴇ** {sender_name}",
                 )
-            
-            if config.MUST_JOIN:
-                try:
-                    await client.get_chat_member(config.MUST_JOIN, message.from_user.id)
-                except UserNotParticipant:
-                    sub = await client.export_chat_invite_link(config.MUST_JOIN)
-                    join_button = InlineKeyboardMarkup(
-                        [[
-                            InlineKeyboardButton("📑 Gabung Dulu", url=sub)
-                            ]
-                         ])
-
-            if config.MUST_JOIN_IMG:
-                try:
-                    return await message.reply_photo(
-                        photo=config.MUST_JOIN_IMG,
-                        caption=_["start_8"].format(message.from_user.mention),
-                        reply_markup=join_button,
-                    )
-                except:
-                    pass
-
-            return await message.reply_text(
-                _["start_8"].format(message.from_user.mention),
-                reply_markup=join_button,
-            )
     else:
         try:
             await app.resolve_peer(OWNER_ID[0])
