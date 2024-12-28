@@ -76,7 +76,7 @@ start_4 : "Anggota Pengguna Sudo {0}, {1} baru saja bergabung dengan obrolan And
 start_5 : "❗️ **Diperlukan Supergrup/Grup Publik** ️\n\nHarap ubah **grup** Anda menjadi **grup Publik** lalu tambahkan saya kembali.\n\n**Bagaimana cara membuat grup Publik?**\n✅ Jadikan riwayat obrolan grup Anda **terlihat** sekali."
 start_6 : "**Daftar Hitam Obrolan**\n\nObrolan Anda telah dimasukkan dalam daftar hitam oleh Bot. Harap minta Pengguna Sudo untuk memasukkan obrolan ke daftar putih terlebih dahulu. Periksa [Sudolist dari sini]({0})."
 start_7 : "{0} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ.\n\n<b>✫ ᴜᴘᴛɪᴍᴇ :</b> {1}"
-start_8 : "👋🏻 Halo, Saya {0}.\n\nSaya bot telegram streaming dengan beberapa fitur berguna.\nSilahkan bergabung dulu jika ingin menggunakan bot ini, lalu klik ulang /start"
+start_8 : "👋🏻 Halo, {0}.\n\nSaya {0} bot telegram streaming dengan beberapa fitur berguna.\nSilahkan bergabung dulu jika ingin menggunakan bot ini, lalu klik ulang /start"
 
 # Help
 help_1 : "Klik tombol di bawah untuk informasi lebih lanjut. Jika Anda menghadapi masalah dalam perintah, Anda dapat menghubungi pemilik bot saya atau bertanya dalam obrolan dukungan.\n\nSemua perintah dapat digunakan dengan: /"
