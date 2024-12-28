@@ -40,7 +40,7 @@ from .func import is_subscriber
 loop = asyncio.get_running_loop()
 
 @app.on_message(filters.command(["start"]) & filters.private & ~is_subscriber & ~BANNED_USERS)
-async def start_with_must_join(client, message: Message):
+async def start_with_must_join(client, message: Message, _):
     if MUST_JOIN:
         try:
             invite_link = await client.export_chat_invite_link(MUST_JOIN)
@@ -53,7 +53,7 @@ async def start_with_must_join(client, message: Message):
         )
 
         bot_name = f"[{client.me.first_name}](tg://user?id={client.me.id})"
-        caption = f"<blockquote>{['start_8'].format(bot_name)}</blockquote>"
+        caption = f"{_['start_8'].format(bot_name)}"
 
         return await message.reply_photo(
             photo=MUST_JOIN_IMG,
