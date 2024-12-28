@@ -204,6 +204,10 @@ autoclean = []
 
 
 # Images
+MUST_JOIN_IMG = getenv(
+    "MUST_JOIN_IMG",
+    "https://graph.org/file/4d072e70237fa390662fd-14eee93fa258d53e75.jpg",
+)
 
 START_IMG_URL = getenv(
     "START_IMG_URL",
