@@ -69,14 +69,14 @@ admin_33 : "✅ Berhasil Mencari Aliran ke {0} Menit"
 admin_34 : "⛔️ Gagal mencari aliran saat ini."
 
 # Start
-start_1 : "Hallo {0} .\n\n➻ Ini Bot Musik Plus manage.\n\nBisa Play di ᴘʟᴀᴛғᴏʀᴍs : Yᴏᴜᴛᴜʙᴇ, Sᴘᴏᴛɪғʏ, Sᴏᴜɴᴅᴄʟᴏᴜᴅ ᴇᴛᴄ.\n\n๏ Masukan Gua ke Grub."
+start_1 : "Hallo {0} .\n\nIni Bot Musik Plus manage.\nPlatform pendukung seperti Youtube, Spotify, Soundcloud dll\n\nJangan ragu untuk menambahkan saya ke Grup Anda."
 start_2 : "Selamat datang di {0}\n\nSaya memerlukan **izin admin** untuk bekerja dengan baik.\n\nNama Pengguna Asisten:- @{1}\nID Asisten:- {2} "
 start_3 : "Pemilik {0}, {1} baru saja bergabung dengan obrolan Anda."
 start_4 : "Anggota Pengguna Sudo {0}, {1} baru saja bergabung dengan obrolan Anda."
 start_5 : "❗️ **Diperlukan Supergrup/Grup Publik** ️\n\nHarap ubah **grup** Anda menjadi **grup Publik** lalu tambahkan saya kembali.\n\n**Bagaimana cara membuat grup Publik?**\n✅ Jadikan riwayat obrolan grup Anda **terlihat** sekali."
 start_6 : "**Daftar Hitam Obrolan**\n\nObrolan Anda telah dimasukkan dalam daftar hitam oleh Bot. Harap minta Pengguna Sudo untuk memasukkan obrolan ke daftar putih terlebih dahulu. Periksa [Sudolist dari sini]({0})."
 start_7 : "{0} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ.\n\n<b>✫ ᴜᴘᴛɪᴍᴇ :</b> {1}"
-start_8 : "👋🏻 Halo, Nama saya {0}.\n\nSaya bot telegram streaming dengan beberapa fitur berguna. Platform pendukung seperti Youtube, Spotify, Resso, AppleMusic , Soundcloud dll.\n\nJangan ragu untuk menambahkan saya ke Grup Anda."
+start_8 : "👋🏻 Halo, Saya {0}.\n\nSaya bot telegram streaming dengan beberapa fitur berguna.\nSilahkan bergabung dulu jika ingin menggunakan bot ini, lalu klik ulang /start"
 
 # Help
 help_1 : "Klik tombol di bawah untuk informasi lebih lanjut. Jika Anda menghadapi masalah dalam perintah, Anda dapat menghubungi pemilik bot saya atau bertanya dalam obrolan dukungan.\n\nSemua perintah dapat digunakan dengan: /"
