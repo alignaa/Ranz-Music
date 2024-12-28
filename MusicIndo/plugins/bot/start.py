@@ -53,7 +53,8 @@ async def start_with_must_join(client, message: Message, _):
             [[InlineKeyboardButton("📑 Gabung Dulu", url=invite_link)]]
         )
 
-        bot_name = f"[{client.me.first_name}](tg://user?id={client.me.id})"
+        bot_user = await client.get_me()
+        bot_name = bot_user.mention
 
         return await message.reply_photo(
             photo=MUST_JOIN_IMG,
