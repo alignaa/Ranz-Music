@@ -53,7 +53,7 @@ async def start_with_must_join(client, message: Message, _):
         )
 
         bot_name = f"[{client.me.first_name}](tg://user?id={client.me.id})"
-        caption = f"<blockquote>{['start_8'].format(bot_name)}</blockquote>"
+        caption = f"<blockquote>{_['start_8'].format(bot_name)}</blockquote>"
 
         return await message.reply_photo(
             photo=MUST_JOIN_IMG,
