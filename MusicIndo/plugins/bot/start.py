@@ -40,6 +40,7 @@ from .func import is_subscriber
 loop = asyncio.get_running_loop()
 
 @app.on_message(filters.command(["start"]) & filters.private & ~is_subscriber & ~BANNED_USERS)
+@LanguageStart
 async def start_with_must_join(client, message: Message, _):
     if MUST_JOIN:
         try:
