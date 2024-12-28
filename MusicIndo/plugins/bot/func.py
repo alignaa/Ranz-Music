@@ -4,8 +4,8 @@ from config import MUST_JOIN
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-async def subscribed(client: Client, message: Message, _):
-    user_id = message.from_user.id
+async def subscribed(filters, client, update):
+    user_id = update.message.from_user.id
     if user_id in MUST_JOIN:
         return True
 
