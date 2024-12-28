@@ -57,7 +57,7 @@ async def start_with_must_join(client, message: Message, _):
 
         return await message.reply_photo(
             photo=MUST_JOIN_IMG,
-            caption= f"{_['start_8'].format(bot_name)}",
+            caption= f"<blockquote>{_['start_8'].format(bot_name)}</blockquote>",
             reply_markup=join_button,
             parse_mode=ParseMode.MARKDOWN,
         )
