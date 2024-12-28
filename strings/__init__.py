@@ -24,7 +24,7 @@ def get_command(value: str) -> List:
 
 
 def get_string(lang: str):
-    return languages[lang]
+    return languages.get(lang, languages["id"])
 
 
 for filename in os.listdir(r"./strings"):
