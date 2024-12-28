@@ -221,6 +221,12 @@ queue_5 : "Hanya satu track di dalam antrian, Silahkan tambahkan lagi untuk chec
 stream_1 : "🎥 **Started Streaming** 💡\n\n**📀 Title ⋙** [{0}]({1})\n⏰ **Duration ⋙** {2}\n🧸 **Requested By ⋙** {3}"
 stream_2 : "🎥 **Started Streaming** 💡\n\n**📀 Title ⋙** {0}\n⏰ **Duration ⋙** {1}\n🧸 **Requested By ⋙** {2}"
 
+#General Buttons
+CLOSE_BUTTON  : "ᴄʟᴏsᴇ"
+CLOSEMENU_BUTTON  : "ᴄʟᴏsᴇ"
+BACK_BUTTON : "ʙᴀᴄᴋ"
+UNBAN_BUTTON : "ᴜɴʙᴀɴ ᴀssɪsᴛᴀɴᴛ"
+
 L_B_1 : "🚀 Lihat Lirik Sekarang"
 
 # Start
