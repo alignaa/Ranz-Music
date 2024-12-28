@@ -5,7 +5,7 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 
 async def subscribed(filters, client, update):
-    user_id = update.message.from_user.id
+    user_id = update.from_user.id
     if user_id in MUST_JOIN:
         return True
 
