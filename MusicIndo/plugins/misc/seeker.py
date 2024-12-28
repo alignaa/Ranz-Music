@@ -75,7 +75,7 @@ async def markup_timer():
                     language = await get_lang(chat_id)
                     _ = get_string(language)
                 except:
-                    _ = get_string("en")
+                    _ = get_string("id")
                 try:
                     buttons = (
                         stream_markup_timer(
