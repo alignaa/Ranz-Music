@@ -1,34 +1,29 @@
-#
-# Copyright (C) 2024 by AnonymousX888@Github, < https://github.com/AnonymousX888 >.
-#
-# This file is part of < https://github.com/hakutakaid/Music-Indo.git > project,
-# and is released under the MIT License.
-# Please see < https://github.com/hakutakaid/Music-Indo.git/blob/master/LICENSE >
-#
-# All rights reserved.
-
-
 import asyncio
+from pyrogram import Client
 
-from pyrogram import Client as c
+API_ID = input("\nMasukkan API_ID Anda:\n > ")
+API_HASH = input("\nMasukkan API_HASH Anda:\n > ")
 
-API_ID = input("\nEnter Your API_ID:\n > ")
-API_HASH = input("\nEnter Your API_HASH:\n > ")
-
-i = c("yukkistring", in_memory=True, api_id=API_ID, api_hash=API_HASH)
-
+# Gantilah dengan nama bot Anda atau string unik
+NAMA_SESI = "ranzstring"
 
 async def main():
-    await i.start()
-    ss = await i.export_session_string()
-    print("\nHERE IS YOUR STRING SESSION, COPY IT, DON'T SHARE!!\n")
-    print(f"\n{ss}\n")
-    print("\n STRING GENERATED\n")
-    xx = f"HERE IS YOUR STRING SESSION, COPY IT, DON'T SHARE!!\n\n`{ss}`\n\n STRING GENERATED"
-    try:
-        await i.send_message("me", xx)
-    except BaseException:
-        pass
+    # Inisialisasi Client dengan nama sesi, API ID, dan API Hash
+    async with Client(NAMA_SESI, api_id=API_ID, api_hash=API_HASH) as client:
+        # Ekspor string sesi
+        ss = await client.export_session_string()
+        print("\nINI ADALAH STRING SESI ANDA, SALIN DAN JANGAN BAGIKAN!!\n")
+        print(f"\n{ss}\n")
+        print("\nSTRING TELAH DIBUAT\n")
+        
+        # Siapkan pesan
+        xx = f"INI ADALAH STRING SESI ANDA, SALIN DAN JANGAN BAGIKAN!!\n\n`{ss}`\n\nSTRING TELAH DIBUAT"
+        
+        try:
+            # Kirim string sesi ke diri Anda sendiri
+            await client.send_message("me", xx)
+        except Exception as e:
+            print(f"Gagal mengirim pesan: {e}")
 
-
+# Jalankan fungsi utama
 asyncio.run(main())
