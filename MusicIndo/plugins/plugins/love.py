@@ -48,9 +48,9 @@ def love_command(client, message):
     app.send_message(message.chat.id, response)
 
 
-__MODULE__ = "ʟᴏᴠᴇ"
+__MODULE__ = "Lᴏᴠᴇ"
 __HELP__ = """
-<b>ʟᴏᴠᴇ ᴄᴀʟᴄᴜʟᴀᴛᴏʀ:</b>
+**ʟᴏᴠᴇ ᴄᴀʟᴄᴜʟᴀᴛᴏʀ:**
 
-`/love [name1] [name2]`: ᴄᴀʟᴄᴜʟᴀᴛᴇꜱ ᴛʜᴇ ᴘᴇʀᴄᴇɴᴛᴀɢᴇ ᴏғ ʟᴏᴠᴇ ʙᴇᴛᴡᴇᴇɴ ᴛᴡᴏ ᴘᴇᴏᴘʟᴇ.
+• `/love [name1] [name2]`: Cᴀʟᴄᴜʟᴀᴛᴇs ᴛʜᴇ ᴘᴇʀᴄᴇɴᴛᴀɢᴇ ᴏғ ʟᴏᴠᴇ ʙᴇᴛᴡᴇᴇɴ ᴛᴡᴏ ᴘᴇᴏᴘʟᴇ.
 """

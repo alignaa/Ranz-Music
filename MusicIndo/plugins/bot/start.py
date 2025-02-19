@@ -9,12 +9,15 @@
 #
 import asyncio
 import time
+
 from pyrogram import filters
 from pyrogram.enums import ChatType, ParseMode
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
+
 import config
-from config import BANNED_USERS, START_IMG_URL,OWNER_ID, MUST_JOIN, MUST_JOIN_IMG
+from config import BANNED_USERS, START_IMG_URL
+from config.config import OWNER_ID
 from strings import get_string
 from MusicIndo import Telegram, YouTube, app
 from MusicIndo.misc import SUDOERS, _boot_
@@ -35,40 +38,15 @@ from MusicIndo.utils.formatters import get_readable_time
 from MusicIndo.utils.functions import MARKDOWN, WELCOMEHELP
 from MusicIndo.utils.inline import alive_panel, private_panel, start_pannel
 from .help import help_parser
-from .func import is_subscriber
 
 loop = asyncio.get_running_loop()
 
-@app.on_message(filters.command(["start"]) & filters.private & ~is_subscriber & ~BANNED_USERS)
-@LanguageStart
-async def start_with_must_join(client, message: Message, _):
-    if MUST_JOIN:
-        try:
-            invite_link = await client.export_chat_invite_link(MUST_JOIN)
-        except Exception as e:
-            print(f"Error generating invite link: {e}")
-            return await message.reply_text("Maaf, tidak dapat menghasilkan link undangan saat ini.")
 
-        join_button = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("📑 Gabung Dulu", url=invite_link)]]
-        )
-
-        bot_user = await client.get_me()
-        bot_name = bot_user.mention
-
-        return await message.reply_photo(
-            photo=MUST_JOIN_IMG,
-            caption= f"<blockquote>{_['start_8'].format(bot_name)}</blockquote>",
-            reply_markup=join_button,
-            parse_mode=ParseMode.HTML,
-        )
-
-@app.on_message(filters.command(["start"]) & filters.private & is_subscriber & ~BANNED_USERS)
+@app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
 async def start_comm(client, message: Message, _):
     chat_id = message.chat.id
     await add_served_user(message.from_user.id)
-    
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
@@ -329,18 +307,18 @@ async def welcome(client, message: Message):
             return
 
 
-__MODULE__ = "ʙᴏᴛ"
+__MODULE__ = "Boᴛ"
 __HELP__ = f"""
-<blockquote>
-➢ <b>ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ/b>
+/stats - Gᴇᴛ Tᴏᴘ 𝟷𝟶 Tʀᴀᴄᴋs Gʟᴏʙᴀʟ Sᴛᴀᴛs, Tᴏᴘ 𝟷𝟶 Usᴇʀs ᴏғ ʙᴏᴛ, Tᴏᴘ 𝟷𝟶 Cʜᴀᴛs ᴏɴ ʙᴏᴛ, Tᴏᴘ 𝟷𝟶 Pʟᴀʏᴇᴅ ɪɴ ᴀ ᴄʜᴀᴛ ᴇᴛᴄ ᴇᴛᴄ.
 
-`/stats` - ɢᴇᴛ ᴛᴏᴘ 𝟷𝟶 ᴛʀᴀᴄᴋꜱ ɢʟᴏʙᴀʟ ꜱᴛᴀᴛꜱ, ᴛᴏᴘ 𝟷𝟶 ᴜꜱᴇʀꜱ ᴏғ ʙᴏᴛ, ᴛᴏᴘ 𝟷𝟶 ᴄʜᴀᴛꜱ ᴏɴ ʙᴏᴛ, ᴛᴏᴘ 𝟷𝟶 ᴘʟᴀʏᴇᴅ ɪɴ ᴀ ᴄʜᴀᴛ ᴇᴛᴄ ᴇᴛᴄ.
-`/sudolist` - ᴄʜᴇᴄᴋ ꜱᴜᴅᴏ ᴜꜱᴇʀꜱ ᴏғ {app.mention}
-`/lyrics [ᴍᴜꜱɪᴄ ɴᴀᴍᴇ]` - ꜱᴇᴀʀᴄʜᴇꜱ ʟʏʀɪᴄꜱ ғᴏʀ ᴛʜᴇ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴍᴜꜱɪᴄ ᴏɴ ᴡᴇʙ.
-`/song [ᴛʀᴀᴄᴋ ɴᴀᴍᴇ] ᴏʀ [ʏᴛ ʟɪɴᴋ]` - ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴʏ ᴛʀᴀᴄᴋ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ ɪɴ ᴍᴘ𝟹 ᴏʀ ᴍᴘ𝟺 ғᴏʀᴍᴀᴛꜱ.
-`/player` - ɢᴇᴛ ᴀ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ ᴘʟᴀʏɪɴɢ ᴘᴀɴᴇʟ.
+/sudolist - Cʜᴇᴄᴋ Sᴜᴅᴏ Usᴇʀs ᴏғ {app.mention}
 
-➢ c sᴛᴀɴᴅs ғᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
-`/queue ᴏʀ /cqueue` - ᴄʜᴇᴄᴋ Qᴜᴇᴜᴇ ʟɪꜱᴛ ᴏғ ᴍᴜꜱɪᴄ.
-</blockquote>
-"""
+/lyrics [Mᴜsɪᴄ Nᴀᴍᴇ] - Sᴇᴀʀᴄʜᴇs Lʏʀɪᴄs ғᴏʀ ᴛʜᴇ ᴘᴀʀᴛɪᴄᴜʟᴀʀ Mᴜsɪᴄ ᴏɴ ᴡᴇʙ.
+
+/song [Tʀᴀᴄᴋ Nᴀᴍᴇ] ᴏʀ [YT Lɪɴᴋ] - Dᴏᴡɴʟᴏᴀᴅ ᴀɴʏ ᴛʀᴀᴄᴋ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ ɪɴ ᴍᴘ𝟹 ᴏʀ ᴍᴘ𝟺 ғᴏʀᴍᴀᴛs.
+
+/player -  Gᴇᴛ ᴀ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ Pʟᴀʏɪɴɢ Pᴀɴᴇʟ.
+
+c sᴛᴀɴᴅs ғᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
+
+/queue ᴏʀ /cqueue - Cʜᴇᴄᴋ Qᴜᴇᴜᴇ Lɪsᴛ ᴏғ Mᴜsɪᴄ."""

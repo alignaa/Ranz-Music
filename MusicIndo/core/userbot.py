@@ -57,8 +57,8 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("")
-                await self.one.join_chat("")
+                await self.one.join_chat("LogUbotX")
+                await self.one.join_chat("AnonymousX888")
             except:
                 pass
             assistants.append(1)
@@ -93,7 +93,7 @@ class Userbot(Client):
                 LOGGER(__name__).error(
                     f"Assistant Account 2 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
                 )
-                sys.exit()
+                # sys.exit()
             get_me = await self.two.get_me()
             self.two.username = get_me.username
             self.two.id = get_me.id
@@ -157,8 +157,8 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("")
-                await self.five.join_chat("")
+                await self.five.join_chat("LogUbotX")
+                await self.five.join_chat("AnonymousX888")
             except:
                 pass
             assistants.append(5)

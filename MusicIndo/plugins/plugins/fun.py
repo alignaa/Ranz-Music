@@ -65,18 +65,16 @@ async def bored_command(client, message):
         await message.reply("Fᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ ᴀᴄᴛɪᴠɪᴛʏ.")
 
 
-__MODULE__ = "ꜰᴜɴ"
+__MODULE__ = "Fᴜɴ"
 __HELP__ = """
-<blockquote>
-➢ <b>ꜰᴜɴ ᴄᴏᴍᴍᴀɴᴅꜱ</b>
+**ʜᴀᴠɪɴɢ ꜰᴜɴ:**
 
-`/dice`: ʀᴏʟʟꜱ ᴀ ᴅɪᴄᴇ.
-`/ludo`: ᴘʟᴀʏ ʟᴜᴅᴏ.
-`/dart`: ᴛʜʀᴏᴡꜱ ᴀ ᴅᴀʀᴛ.
-`/basket` ᴏʀ `/basketball`: ᴘʟᴀʏꜱ ʙᴀꜱᴋᴇᴛʙᴀʟʟ.
-`/football`: ᴘʟᴀʏꜱ ғᴏᴏᴛʙᴀʟʟ.
-`/slot` ᴏʀ `/jackpot`: ᴘʟᴀʏꜱ ᴊᴀᴄᴋᴘᴏᴛ.
-`/bowling`: ᴘʟᴀʏꜱ ʙᴏᴡʟɪɴɢ.
-`/bored`: ɢᴇᴛꜱ ʀᴀɴᴅᴏᴍ ᴀᴄᴛɪᴠɪᴛʏ ɪғ ʏᴏᴜ'ʀᴇ ʙᴏʀᴇᴅ.
-</blockquote>
+• `/dice`: Rᴏʟʟs ᴀ ᴅɪᴄᴇ.
+• `/ludo`: Pʟᴀʏ Lᴜᴅᴏ.
+• `/dart`: Tʜʀᴏᴡs ᴀ ᴅᴀʀᴛ.
+• `/basket` ᴏʀ `/basketball`: Pʟᴀʏs ʙᴀsᴋᴇᴛʙᴀʟʟ.
+• `/football`: Pʟᴀʏs ғᴏᴏᴛʙᴀʟʟ.
+• `/slot` ᴏʀ `/jackpot`: Pʟᴀʏs ᴊᴀᴄᴋᴘᴏᴛ.
+• `/bowling`: Pʟᴀʏs ʙᴏᴡʟɪɴɢ.
+• `/bored`: Gᴇᴛs ʀᴀɴᴅᴏᴍ ᴀᴄᴛɪᴠɪᴛʏ ɪғ ʏᴏᴜ'ʀᴇ ʙᴏʀᴇᴅ.
 """

@@ -40,12 +40,11 @@ class YukkiBot(Client):
                 config.LOG_GROUP_ID,
                 text=f"<u><b>{self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :</b><u>\n\nɪᴅ : <code>{self.id}</code>\nɴᴀᴍᴇ : {self.name}\nᴜsᴇʀɴᴀᴍᴇ : @{self.username}",
             )
-        except Exception as e:
+        except:
             LOGGER(__name__).error(
                 "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
             )
-            LOGGER(__name__).error(f"Failed to access log group: {e}")
-            sys.exit()
+            # sys.exit()
         if config.SET_CMDS == str(True):
             try:
                 await self.set_bot_commands(

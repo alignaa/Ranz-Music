@@ -29,11 +29,9 @@ async def bots(client, message):
         await asyncio.sleep(e.value)
 
 
-__MODULE__ = "ʙᴏᴛꜱ"
+__MODULE__ = "Bᴏᴛs"
 __HELP__ = """
-<blockquote>
-➢ <b>ʙᴏᴛꜱ ᴄᴏᴍᴍᴀɴᴅꜱ</b>
+**ʙᴏᴛs**
 
-`/bots` - ɢᴇᴛ ᴀ ʟɪꜱᴛ ᴏғ ʙᴏᴛꜱ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-</blockquote>
+• /bots - ɢᴇᴛ ᴀ ʟɪsᴛ ᴏғ ʙᴏᴛs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
 """

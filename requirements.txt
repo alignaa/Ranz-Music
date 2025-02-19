@@ -13,7 +13,7 @@ pillow==9.5.0
 psutil
 pytube
 pykeyboard
-py-tgcalls==2.0.3
+git+https://github.com/pytgcalls/pytgcalls@f8452a50ab7c7d98fe7ca0cb5d4bd8e27b12a8cc
 ntgcalls==1.2.1
 python-dotenv
 pyyaml
@@ -22,10 +22,10 @@ speedtest-cli
 spotipy
 tgcrypto
 urllib3
+git+https://github.com/KurimuzonAkuma/pyrogram@aa9b1072e4e4106bbd463c09642a419e5081f2bf
 git+https://github.com/yt-dlp/yt-dlp
 git+https://github.com/alexmercerind/youtube-search-python@main
 git+https://github.com/joetats/youtube_search@master
-git+https://github.com/naya1503/mypyrogram@dev
 SafoneAPI
 bing-image-urls
 gTTS

@@ -11,7 +11,7 @@ from MusicIndo.core.bot import YukkiBot
 from MusicIndo.core.dir import dirr
 from MusicIndo.core.git import git
 from MusicIndo.core.userbot import Userbot
-from MusicIndo.misc import dbb,heroku, sudo
+from MusicIndo.misc import dbb, heroku, sudo
 from .logging import LOGGER
 
 # Directories

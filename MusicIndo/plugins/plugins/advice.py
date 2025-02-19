@@ -27,12 +27,7 @@ async def advice(_, message):
         await app.send_message(LOG_GROUP_ID, "/astronomical not working")
 
 
-__MODULE__ = "ᴀᴅᴠɪᴄᴇ"
+__MODULE__ = "Aᴅᴠɪᴄᴇ"
 __HELP__ = """
-<blockquote>
-➢ <b>ᴀᴅᴠɪᴄᴇ ᴄᴏᴍᴍᴀɴᴅꜱ</b>
-
-/advice - ɢᴇᴛ ʀᴀɴᴅᴏᴍ ᴀᴅᴠɪᴄᴇ
-/astronomical - ᴛᴏ ɢᴇᴛ ᴛᴏᴅᴀʏ'ꜱ ᴀꜱᴛʀᴏɴᴏᴍɪᴄᴀʟ ғᴀᴄᴛ
-</blockquote>
-"""
+/advice - Gᴇᴛ ʀᴀɴᴅᴏᴍ ᴀᴅᴠɪᴄᴇ
+/astronomical - ᴛᴏ ɢᴇᴛ ᴛᴏᴅᴀʏ's ᴀsᴛʀᴏɴᴏᴍɪᴄᴀʟ  ғᴀᴄᴛ"""

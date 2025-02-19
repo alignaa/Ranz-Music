@@ -53,11 +53,9 @@ async def figlet_handler(Client, query: CallbackQuery):
         return await query.answer(e, show_alert=True)
 
 
-__MODULE__ = "ꜰɪɢʟᴇᴛ"
+__MODULE__ = "Fɪɢʟᴇᴛ"
 __HELP__ = """
-<blockquote>
-➢ <b>ꜰɪɢʟᴇᴛ ᴄᴏᴍᴍᴀɴᴅꜱ</b>
+**ғɪɢʟᴇᴛ**
 
-`/figlet [ᴛᴇxᴛ]` - ᴄʀᴇᴀᴛᴇꜱ ᴀ ғɪɢʟᴇᴛ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ.
-</blockquote>
+• /figlet <text> - ᴄʀᴇᴀᴛᴇs ᴀ ғɪɢʟᴇᴛ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ.
 """

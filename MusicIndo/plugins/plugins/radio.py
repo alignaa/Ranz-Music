@@ -188,5 +188,5 @@ async def radio(client, message: Message):
         )
 
 
-__MODULE__ = "ʀᴀᴅɪᴏ"
-__HELP__ = f"\n/radio [ꜱᴛᴀᴛɪᴏɴ ɴᴀᴍᴇ] - ᴛᴏ ᴘʟᴀʏ ʀᴀᴅɪᴏ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ\n\nʙᴇʟᴏᴡ ᴀʀᴇ ꜱᴏᴍᴇ ꜱᴛᴀᴛɪᴏɴ ɴᴀᴍᴇ:\n{valid_stations}"
+__MODULE__ = "Rᴀᴅɪᴏ"
+__HELP__ = f"\n/radio [sᴛᴀᴛɪᴏɴ ɴᴀᴍᴇ] - ᴛᴏ ᴘʟᴀʏ **ʀᴀᴅɪᴏ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ**\n\nʙᴇʟᴏᴡ ᴀʀᴇ sᴏᴍᴇ sᴛᴀᴛɪᴏɴ ɴᴀᴍᴇ:\n{valid_stations}"

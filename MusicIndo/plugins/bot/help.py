@@ -74,18 +74,18 @@ def paginate_modules(page_n, module_dict, prefix, chat=None):
         pairs = pairs[modulo_page * COLUMN_SIZE : COLUMN_SIZE * (modulo_page + 1)] + [
             (
                 EqInlineKeyboardButton(
-                    "⮐",
+                    "❮",
                     callback_data="{}_prev({})".format(
                         prefix,
                         modulo_page - 1 if modulo_page > 0 else max_num_pages - 1,
                     ),
                 ),
                 EqInlineKeyboardButton(
-                    "◇",
+                    "Bᴀᴄᴋ",
                     callback_data="settingsback_helper",
                 ),
                 EqInlineKeyboardButton(
-                    "⮑",
+                    "❯",
                     callback_data="{}_next({})".format(prefix, modulo_page + 1),
                 ),
             )
@@ -94,7 +94,7 @@ def paginate_modules(page_n, module_dict, prefix, chat=None):
         pairs.append(
             [
                 EqInlineKeyboardButton(
-                    "◇",
+                    "Bᴀᴄᴋ",
                     callback_data="settingsback_helper",
                 ),
             ]
@@ -172,7 +172,7 @@ async def help_button(client, query):
         module = mod_match.group(1)
         prev_page_num = int(mod_match.group(2))
         text = (
-            f"<b>ʜᴇʟᴘ ꜰᴏʀ {HELPABLE[module].__MODULE__}:</b>\n"
+            f"<b><u>Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ {HELPABLE[module].__MODULE__}:</u></b>\n"
             + HELPABLE[module].__HELP__
         )
 
@@ -180,7 +180,7 @@ async def help_button(client, query):
             [
                 [
                     InlineKeyboardButton(
-                        text="◇", callback_data=f"help_back({prev_page_num})"
+                        text="↪️ Back", callback_data=f"help_back({prev_page_num})"
                     ),
                     InlineKeyboardButton(text="🔄 Close", callback_data="close"),
                 ],
@@ -188,7 +188,7 @@ async def help_button(client, query):
         )
 
         await query.message.edit(
-            text=text  + f"<b>{app.me.mention}</b>",
+            text=text,
             reply_markup=key,
             disable_web_page_preview=True,
         )
