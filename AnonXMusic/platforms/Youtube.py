@@ -11,6 +11,7 @@ from youtubesearchpython.__future__ import VideosSearch
 from AnonXMusic.utils.database import is_on_off
 from AnonXMusic.utils.formatters import time_to_seconds
 
+kukis = "mycokis.txt"
 
 async def shell_cmd(cmd):
     proc = await asyncio.create_subprocess_shell(
@@ -246,6 +247,7 @@ class YouTubeAPI:
                 "format": "bestaudio/best",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
+                "cookiefile": kukis,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
@@ -263,6 +265,7 @@ class YouTubeAPI:
                 "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio[ext=m4a])",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
+                "cookiefile": kukis,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
@@ -282,6 +285,7 @@ class YouTubeAPI:
                 "format": formats,
                 "outtmpl": fpath,
                 "geo_bypass": True,
+                "cookiefile": kukis,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
@@ -297,6 +301,7 @@ class YouTubeAPI:
                 "format": format_id,
                 "outtmpl": fpath,
                 "geo_bypass": True,
+                "cookiefile": kukis,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
