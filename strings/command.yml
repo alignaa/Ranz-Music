@@ -1,9 +1,9 @@
 #
-# Copyright (C) 2024 by AnonymousX888@Github, < https://github.com/AnonymousX888 >.
+# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
-# This file is part of < https://github.com/hakutakaid/Music-Indo.git > project,
-# and is released under the MIT License.
-# Please see < https://github.com/hakutakaid/Music-Indo.git/blob/master/LICENSE >
+# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -29,11 +29,10 @@ STREAM_COMMAND : ["stream", "cstream", "streamforce"]
 #Playlists Command
 PLAYLIST_COMMAND : ["playlist"]
 DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
-ADDPLAYLIST_COMMAND : ["addplaylist"]
 
 
 # Tools
-QUEUE_COMMAND : ["queue","cqueue"]
+QUEUE_COMMAND : ["queue","cqueue", "player", "cplayer", "playing", "cplaying"]
 SONG_COMMAND : ["song", "video"]
 LYRICS_COMMAND : ["lyrics"]
 
@@ -51,7 +50,7 @@ SKIP_COMMAND : ["skip", "cskip"]
 SHUFFLE_COMMAND : ["shuffle", "cshuffle"]
 LOOP_COMMAND : ["loop", "cloop"]
 SEEK_COMMAND : ["seek", "cseek", "seekback", "cseekback"]
-REBOOT_COMMAND : ["reboot"]
+RESTART_COMMAND : ["restart"]
 
 # Sudo Users Commaands
 
@@ -86,8 +85,8 @@ VARS_COMMAND : ["vars", "config"]
 
 
 #Basic Bot Commands
-UPDATE_COMMAND : ["update","gitpull"]
-RESTART_COMMAND : ["restart"]
+UPDATE_COMMAND : ["update"]
+REBOOT_COMMAND : ["reboot"]
 AUTOEND_COMMAND : ["autoend"]
 
 #Private Bot Mode
@@ -104,8 +103,8 @@ BLOCKED_COMMAND : ["blockedusers"]
 SPEEDTEST_COMMAND : ["speedtest"]
 
 #Voice chat commands
-ACTIVEVC_COMMAND : ["activevoice","activevc"]
-ACTIVEVIDEO_COMMAND : ["activevideo","activevd"]
+ACTIVEVC_COMMAND : ["activevoice"]
+ACTIVEVIDEO_COMMAND : ["activevideo"]
 
 #Gban Commands
 GBAN_COMMAND : ["gban"]

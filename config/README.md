@@ -13,8 +13,9 @@ Config vars are basically the variables which configure or modify bot to functio
 3. `BOT_TOKEN` : Get it from [@Botfather](http://t.me/BotFather) in Telegram
 4. `MONGO_DB_URI` : Get mongo db [from here.](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/mongodb)
 5. `LOG_GROUP_ID` : You'll need a Private Group ID for this. Supergroup Needed with id starting from -100 
-6. `OWNER_ID` : Your Owner ID for managing your bot.
-7. `STRING_SESSION` : Pyrogram Session Needed, Generate string from [@YukkiStringBot](http://t.me/YukkiStringBot) in Telegram.
+6. `MUSIC_BOT_NAME` : A name for your Music bot.
+7. `OWNER_ID` : Your Owner ID for managing your bot.
+8. `STRING_SESSION` : Pyrogram Session Needed, Generate string from [@YukkiStringBot](http://t.me/YukkiStringBot) in Telegram.
 
 
 ## Non-Mandatory Vars
@@ -64,6 +65,7 @@ Config vars are basically the variables which configure or modify bot to functio
 1. `SPOTIFY_CLIENT_ID` : Get it from https://developer.spotify.com/dashboard 
 2. `SPOTIFY_CLIENT_SECRET` : Get it from https://developer.spotify.com/dashboard 
 
+
 ## Heroku Vars
 
 - To work some Heroku compatible modules, this var value required to Access your account to use `get_log`, `usage`, `update` etc etc commands.
@@ -72,7 +74,7 @@ Config vars are basically the variables which configure or modify bot to functio
 ### How to get these? [Read from here](https://notreallyshikhar.gitbook.io/yukkimusicbot/config-vars/heroku-vars)
 
 1. `HEROKU_API_KEY` : Get it from http://dashboard.heroku.com/account 
-2. `HEROKU_APP_NAME` : You have to Enter the app name which you gave to identify your Music Bot in Heroku.
+2. `HEROKU_APP_NAME` : You have to Enter the app name which you gave to identify your Music Bot in Heroku. 
 
 
 ## Custom Repo Vars

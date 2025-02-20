@@ -1,10 +1,11 @@
 #
-# Copyright (C) 2024 by AnonymousX888@Github, < https://github.com/AnonymousX888 >.
+# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
-# This file is part of < https://github.com/hakutakaid/Music-Indo.git > project,
-# and is released under the MIT License.
-# Please see < https://github.com/hakutakaid/Music-Indo.git/blob/master/LICENSE >
+# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
 # All rights reserved.
+#
 
 from .config import *
