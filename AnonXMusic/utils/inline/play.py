@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardButton
 from AnonXMusic.utils.formatters import time_to_seconds
 
 
-def track_markup(_, videoid, user_id, channel, fplay):
+def track_markup(_, videoid, user_id, channel, fplay, query_type, query):
     buttons = [
         [
             InlineKeyboardButton(
@@ -19,9 +19,17 @@ def track_markup(_, videoid, user_id, channel, fplay):
         ],
         [
             InlineKeyboardButton(
+                text="◉",  # Previous
+                callback_data=f"MusicTrack B|{query_type}|{query}|{user_id}|{channel}|{fplay}",
+            ),
+            InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"],
                 callback_data=f"forceclose {videoid}|{user_id}",
-            )
+            ),
+            InlineKeyboardButton(
+                text="▷",  # Next
+                callback_data=f"MusicTrack F|{query_type}|{query}|{user_id}|{channel}|{fplay}",
+            ),
         ],
     ]
     return buttons

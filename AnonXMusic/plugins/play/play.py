@@ -457,7 +457,7 @@ async def play_music(client, CallbackQuery, _):
         _["play_2"].format(channel) if channel else _["play_1"]
     )
     try:
-        details, track_id = await YouTube.track(vidid, True)
+        details, track_id = await YouTube.track(vidid, 0)  # Ambil lagu pertama
     except:
         return await mystic.edit_text(_["play_3"])
     if details["duration_min"]:
@@ -500,6 +500,37 @@ async def play_music(client, CallbackQuery, _):
         return await mystic.edit_text(err)
     return await mystic.delete()
 
+
+@app.on_callback_query(filters.regex("MusicTrack") & ~BANNED_USERS)
+@languageCB
+async def music_slider(client, CallbackQuery, _):
+    callback_data = CallbackQuery.data.strip()
+    _, direction, query_type, query, user_id, channel, fplay = callback_data.split("|")
+
+    if CallbackQuery.from_user.id != int(user_id):
+        return await CallbackQuery.answer(_["playcb_1"], show_alert=True)
+
+    query_type = int(query_type)
+    if direction == "F":  # Next song
+        query_type = query_type + 1 if query_type < 9 else 0
+    elif direction == "B":  # Previous song
+        query_type = query_type - 1 if query_type > 0 else 9
+
+    details, track_id = await YouTube.track(query, query_type)
+    if not details:
+        return await CallbackQuery.answer("Tidak ada lagu lain yang tersedia.")
+
+    buttons = track_markup(_, track_id, user_id, channel, fplay, query_type, query)
+    med = InputMediaPhoto(
+        media=details["thumb"],
+        caption=_["play_10"].format(
+            details["title"],
+            details["duration_min"],
+        ),
+    )
+    return await CallbackQuery.edit_message_media(
+        media=med, reply_markup=InlineKeyboardMarkup(buttons)
+    )
 
 @app.on_callback_query(filters.regex("AnonymousAdmin") & ~BANNED_USERS)
 async def anonymous_check(client, CallbackQuery):
